@@ -1,0 +1,78 @@
+.featured_layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 7px;
+  margin-left: 17px;
+}
+
+.featured_wrap {
+  margin-bottom: 15px;
+  img {
+    height: 110px;
+    width: 28.07vw;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px #ccc;
+  }
+}
+
+.featured_text {
+  margin-top: 6px;
+}
+
+.featured_title {
+  font-size: 0.9rem;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 29vw;
+}
+
+.featured_creator {
+  font-size: 0.7rem;
+  color: #808080;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 29vw;
+  margin-top: 3px;
+}
+
+/***************     タブレット     ***************/
+@include screen-mq(tab) {
+  .featured_layout {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 0;
+  }
+
+  .featured_wrap {
+    margin-left: 17px;
+    width: 20vw;
+    img {
+      height: 15vh;
+      width: 21vw;
+    }
+  }
+
+  .featured_title {
+    font-size: 0.95rem;
+    width: 21vw;
+  }
+
+  .featured_creator {
+    font-size: 0.8rem;
+    width: 20vw;
+  }
+}
+
+/***************     PC     ***************/
+@include screen-mq(pc) {
+  // .featured_layout {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  //   margin-bottom: 7px;
+  //   margin-left: 17px;
+  // }
+}

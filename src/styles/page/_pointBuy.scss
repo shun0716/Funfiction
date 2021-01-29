@@ -1,0 +1,68 @@
+.point_buy_wrap {
+  padding-top: 5px;
+  min-height: 83.7vh;
+}
+
+.point_buy_notes_wrap {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #ccc;
+  margin: 13px 15px;
+}
+
+.point_buy_all_point {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0;
+  .point_buy_have_point {
+    color: $point_text_color;
+    letter-spacing: 0.1px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .point_buy_view_point {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 5px;
+  }
+  p {
+    line-height: $point_icon_size;
+  }
+  img {
+    width: $point_icon_size;
+    height: $point_icon_size;
+  }
+}
+
+.point_buy_notes_box {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  padding: 0 15px;
+  letter-spacing: 0.1px;
+  p {
+    color: $point_text_color;
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+  }
+}
+
+/***************     タブレット     ***************/
+@include screen-mq(tab) {
+  .point_buy_wrap {
+    width: 70vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/***************     PC     ***************/
+@include screen-mq(pc) {
+  .point_buy_wrap {
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

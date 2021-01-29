@@ -1,0 +1,32 @@
+body {
+  background-color: #fafafafa;
+  line-height: 1;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  font-variant-ligatures: none;
+  font-family: "ヒラギノ角ゴ Pro W3", "ヒラギノ角ゴ W3", "メイリオ",
+    "ＭＳ Ｐゴシック", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  appearance: none;
+}
+
+a,
+input,
+label {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input:-webkit-autofill {
+  animation-name: onAutoFillStart;
+  transition: background-color 50000s ease-in-out 0s;
+}
+
+li {
+  list-style: none;
+}

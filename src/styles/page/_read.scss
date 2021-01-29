@@ -1,0 +1,369 @@
+.read_container {
+  height: 85.66vh;
+}
+
+.manga_top_lavel {
+  position: fixed;
+  top: 0;
+  background-color: #000000;
+  opacity: 0.7;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  z-index: 10;
+  animation: top_in 0.2s linear forwards;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  img {
+    position: relative;
+    left: 5%;
+    transform: translateX(-5%);
+  }
+}
+
+.read_title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+.manga_main_wrap {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.manga_main {
+  width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.finish_page {
+  float: left;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.now_manga_page {
+  position: absolute;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 180px;
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.slash {
+  position: relative;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  transform: rotateZ(-45deg);
+  width: 100px;
+  top: 30px;
+  left: 25px;
+  font-size: 50px;
+}
+
+.max_manga_page_sum {
+  position: relative;
+  color: #ffffff;
+  font-size: 35px;
+  text-align: center;
+  top: 35px;
+  left: 25px;
+  visibility: "";
+}
+
+.now_manga_page_sum {
+  position: relative;
+  color: #ffffff;
+  font-size: 35px;
+  text-align: center;
+}
+
+.page_circle {
+  margin-top: 10px;
+}
+
+.manga_under_lavel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.7;
+  // height: 50px;
+  z-index: 10;
+  animation: under_in 0.2s linear forwards;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.share {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20vh;
+  div {
+    width: 200px;
+    margin: 0 auto 20px;
+  }
+}
+
+.twitter {
+  display: flex;
+  background-color: #00acee;
+  height: 40px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px 0;
+  i {
+    // margin-left: 10px;
+    line-height: 20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+  }
+  p {
+    color: #fff;
+    line-height: 20px;
+  }
+}
+
+.facebooook {
+  display: flex;
+  background-color: #3b5998;
+  height: 40px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px 0;
+  i {
+    margin-left: 10px;
+    line-height: 20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+  }
+  p {
+    color: #fff;
+    line-height: 20px;
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 90%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+.slide_bar_wrap {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/* WebKit・Blink向け 溝のスタイル */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #999999;
+  border: 1px solid #999999;
+  border-radius: 10px;
+}
+/* WebKit・Blink向け つまみのスタイル */
+input[type="range"]::-webkit-slider-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 180px;
+  background: #ff7b00;
+  border: solid 1px #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  /* 以下は つまみの縦位置調整 */
+  margin-top: -10px; /* (つまみの高さ - トラックの高さ) / 2 。つまみの高さは border を含む */
+}
+
+/* WebKit・Blink向け focus時のスタイル */
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #999999;
+}
+
+@keyframes top_in {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes top_out {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+@keyframes under_in {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+
+@keyframes under_out {
+  0% {
+    top: 90%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+/***************     タブレット     ***************/
+@include screen-mq(tab) {
+  .manga_main_wrap {
+    top: 51.3%;
+    width: 90vw;
+  }
+
+  .manga_under_lavel {
+    margin-top: 35px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    height: 25px;
+    width: 25px;
+    margin-top: -12px;
+  }
+
+  .now_manga_page {
+    width: 200px;
+    height: 200px;
+  }
+
+  .now_manga_page_sum {
+    font-size: 50px;
+    top: 30px;
+    left: -35px;
+  }
+
+  .now_manga_page div:nth-child(2) {
+    width: 120px;
+    top: 35px;
+    left: 35px;
+    font-size: 50px;
+  }
+
+  .max_manga_page_sum {
+    position: relative;
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    top: 45px;
+    left: 30px;
+  }
+
+  .page_circle {
+    margin-top: 10px;
+  }
+}
+
+.twitter {
+  display: flex;
+  background-color: #00acee;
+  height: 40px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px 0;
+  i {
+    margin-left: 10px;
+    line-height: 20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+  }
+  p {
+    a {
+      color: #fff;
+    }
+    line-height: 20px;
+  }
+}
+
+.facebooook {
+  display: flex;
+  background-color: #3b5998;
+  height: 40px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px 0;
+  i {
+    margin-left: 10px;
+    line-height: 20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+  }
+  p {
+    a {
+      color: #fff;
+    }
+    line-height: 20px;
+  }
+}
+
+/***************     PC     ***************/
+@include screen-mq(pc) {
+  .manga_main_wrap {
+    width: 70vw;
+    margin-left: 15vw;
+    margin: auto;
+  }
+  .manga_main {
+    width: 35vw;
+    scroll-snap-align: start;
+  }
+  input[type="range"] {
+    margin: 3vw 2.5vw;
+  }
+}

@@ -1,0 +1,137 @@
+$trans: cubic-bezier(0.25, 0.1, 0, 1.325);
+
+.sns-area {
+  color: #000;
+  height: 190px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #f5f5f5;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  animation-name: shareFadein;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.sns-group {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  overflow-x: auto;
+  padding: 5px 10px;
+
+  li {
+    padding: 10px 10px;
+    text-align: center;
+    a {
+      img {
+        width: 45px;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.7rem;
+    color: #808080;
+    margin-top: 7px;
+  }
+}
+
+.sns-item1 {
+  animation-name: snsFadein;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: $trans;
+}
+
+.sns-item2 {
+  animation-name: snsFadein;
+  animation-duration: 0.34s;
+  animation-iteration-count: 1;
+  animation-timing-function: $trans;
+}
+
+.sns-item3 {
+  animation-name: snsFadein;
+  animation-duration: 0.38s;
+  animation-iteration-count: 1;
+  animation-timing-function: $trans;
+}
+
+.sns-item4 {
+  animation-name: snsFadein;
+  animation-duration: 0.42s;
+  animation-iteration-count: 1;
+  animation-timing-function: $trans;
+}
+
+.sns-item5 {
+  animation-name: snsFadein;
+  animation-duration: 0.46s;
+  animation-iteration-count: 1;
+  animation-timing-function: $trans;
+}
+
+.sns-item6 {
+  animation-name: snsFadein;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: $trans;
+}
+
+.sns-item7 {
+  animation-name: snsFadein;
+  animation-duration: 0.54s;
+  animation-iteration-count: 1;
+  animation-timing-function: $trans;
+}
+
+.shareCansell {
+  height: 100%;
+  border-top: 1px solid #dadbdb;
+  background-color: #fff;
+  p {
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.share_btn {
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes shareFadein {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes snsFadein {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

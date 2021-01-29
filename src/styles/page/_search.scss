@@ -1,0 +1,192 @@
+.search_wrap {
+  background-color: #fff;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #ccc;
+  input {
+    width: 85%;
+    padding: 7px 10px;
+    font-size: 0.9em;
+    border: 2px solid #f7d042;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    outline: none;
+    -webkit-appearance: none;
+    font-family: FontAwesome;
+    line-height: 15px;
+    color: #808080;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 0 11px;
+}
+
+.search_card {
+  background-color: #fff;
+  margin: 15px 9px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  img {
+    width: 15vw;
+    border: 4px solid #ccc;
+    margin-top: 1.5vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.search_menu {
+  border-bottom: 1px solid #ccc;
+  padding: 8px 5vw;
+  background-color: #fff;
+  span {
+    font-size: 0.8rem;
+    color: #808080;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 9px 0 4px;
+  }
+}
+
+.search_title {
+  font-size: 1rem;
+  color: #404040;
+  position: relative;
+  left: 53%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 90%;
+  margin-top: 7px;
+}
+
+.search_user,
+.search_tag {
+  position: relative;
+  left: 53%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #808080;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 770px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 11px;
+  }
+
+  .search_card {
+    background-color: #fff;
+    margin: 10px 9px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+  }
+
+  .search_card img {
+    width: 25vw;
+    border: 4px solid #ccc;
+    margin-top: 1.5vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .search_title {
+    font-size: 1rem;
+    color: #404040;
+    position: relative;
+    left: 53%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+    margin-top: 7px;
+  }
+
+  .search_user,
+  .search_tag {
+    position: relative;
+    left: 53%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #808080;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 11px;
+  }
+
+  .search_card {
+    background-color: #fff;
+    margin: 10px 9px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+  }
+
+  .search_card img {
+    width: 35vw;
+    border: 4px solid #ccc;
+    margin-top: 1.5vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .search_title {
+    font-size: 1rem;
+    color: #404040;
+    position: relative;
+    left: 53%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+    margin-top: 7px;
+  }
+
+  .search_user,
+  .search_tag {
+    position: relative;
+    left: 53%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #808080;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5px;
+  }
+}

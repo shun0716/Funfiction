@@ -1,0 +1,12 @@
+$break-point-list: 481px, 1025px;
+
+$mq: (
+  "tab": "screen and (min-width: #{nth($break-point-list,1)})",
+  "pc": "print,screen and (min-width: #{nth($break-point-list,2)})"
+) !default;
+
+@mixin screen-mq($key) {
+  @media #{map-get($mq,$key)} {
+    @content;
+  }
+}

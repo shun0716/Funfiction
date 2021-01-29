@@ -1,0 +1,19 @@
+.main {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+/***************     タブレット     ***************/
+@include screen-mq(tab) {
+  .main {
+    margin-top: 47px;
+  }
+}
+
+/***************     PC     ***************/
+@include screen-mq(pc) {
+  .main {
+    margin-top: 65px;
+    margin-bottom: 0;
+  }
+}

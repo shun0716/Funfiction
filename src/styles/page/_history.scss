@@ -1,0 +1,75 @@
+.history_box {
+  margin: 17px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  .history_name {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #303030;
+  }
+
+  .history_date {
+    font-size: 0.7rem;
+    color: #707070;
+  }
+
+  .done_point {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    .done {
+      background-color: green;
+      color: #fff;
+      border-radius: 15px;
+      padding: 10px 15px;
+      font-size: 0.6rem;
+    }
+    .point {
+      font-weight: bold;
+      margin: 0 0 0 auto;
+      span {
+        font-weight: normal;
+      }
+    }
+  }
+}
+.no_history {
+  margin: 20px 0;
+}
+
+/***************     タブレット     ***************/
+@include screen-mq(tab) {
+  .history_box {
+    width: 320px;
+  }
+}
+
+/***************     PC     ***************/
+@include screen-mq(pc) {
+  .history_box {
+    width: 320px;
+    .history_name {
+      font-size: 1.1rem;
+    }
+    .history_date {
+      font-size: 0.9rem;
+    }
+    .done_point {
+      .done {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+      }
+      .point {
+        font-weight: bold;
+        margin: 0 0 0 auto;
+        font-size: 1rem;
+        span {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

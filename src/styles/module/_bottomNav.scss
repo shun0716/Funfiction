@@ -1,0 +1,46 @@
+.bottom_sticky_nav {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  animation-name: fadein;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  svg {
+    font-size: 33px;
+  }
+  .MuiBottomNavigationAction-root {
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0;
+  }
+  .MuiBottomNavigationAction-root.Mui-selected {
+    padding-top: 0;
+  }
+}
+
+.MuiBottomNavigationAction-label {
+  font-size: 0.7rem !important;
+  margin: 1px 0;
+}
+
+@keyframes fadein {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/***************     PC     ***************/
+@include screen-mq(pc) {
+  .bottom_sticky_nav {
+    display: none;
+  }
+}

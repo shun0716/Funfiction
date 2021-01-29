@@ -1,0 +1,27 @@
+.checkout_wrap {
+  display: flex;
+  padding: 20px 10px;
+  border-bottom: 1px solid #ccc;
+  img {
+    width: $check_icon_size;
+    height: $check_icon_size;
+  }
+  p {
+    line-height: $check_icon_size;
+    margin-left: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    span {
+      font-weight: $check_font_weight;
+      font-size: 0.9rem;
+      color: #747b84;
+      margin-left: 5px;
+    }
+  }
+  .checkout_cash {
+    font-weight: $check_font_weight;
+    font-size: 1rem;
+    margin: 0 0 0 auto;
+    color: #d64046;
+  }
+}

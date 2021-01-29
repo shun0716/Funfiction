@@ -1,0 +1,14 @@
+.pc_slider {
+  display: none;
+}
+
+/***************     PC     ***************/
+@include screen-mq(pc) {
+  .slider {
+    display: none;
+  }
+
+  .pc_slider {
+    display: block;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="同人誌がいつでもどこでも読み放題！お気に入りの作品を見つけよう！"
+    />
+    <meta
+      name="viewport"
+      content="user-scalable=no,width=device-width,viewport-fit=cover,initial-scale=1.0,
+      maximum-scale=1.0,
+      minimum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="FANSA" />
+    <meta name="theme-color" content="#fdbc04" />
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <script
+      src="https://kit.fontawesome.com/5ff4b3607b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      /* ピッチインピッチアウトによる拡大縮小を禁止 */
+      document.documentElement.addEventListener(
+        "touchstart",
+        function (e) {
+          if (e.touches.length >= 2) {
+            e.preventDefault();
+          }
+        },
+        { passive: false }
+      );
+      /* ダブルタップによる拡大を禁止 */
+      var t = 0;
+      document.documentElement.addEventListener(
+        "touchend",
+        function (e) {
+          var now = new Date().getTime();
+          if (now - t < 350) {
+            e.preventDefault();
+          }
+          t = now;
+        },
+        false
+      );
+    </script>
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!-- iPhone Xs Max (1242px x 2688px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+      href="splash/launch-1242x2688.png"
+    /> -->
+    <!-- iPhone Xr (828px x 1792px) -->
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+      href="splash/launch-828x1792.png"
+    />
+    <!-- iPhone X, Xs (1125px x 2436px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+      href="splash/launch-1125x2436.png"
+    /> -->
+    <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+      href="splash/launch-1242x2208.png"
+    /> -->
+    <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      href="splash/launch-750x1334.png"
+    /> -->
+    <!-- iPad Pro 12.9" (2048px x 2732px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+      href="splash/launch-2048x2732.png"
+    /> -->
+    <!-- iPad Pro 11” (1668px x 2388px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+      href="splash/launch-1668x2388.png"
+    /> -->
+    <!-- iPad Pro 10.5" (1668px x 2224px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+      href="splash/launch-1668x2224.png"
+    /> -->
+    <!-- iPad Mini, Air (1536px x 2048px) -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+      href="splash/launch-1536x2048.png"
+    /> -->
+
+    <title>Fanfiction</title>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <div class="shutter"></div> -->
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

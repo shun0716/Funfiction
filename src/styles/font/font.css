@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Boku";
+  src: url("./Boku.ttf") format("truetype");
+  src: url("./Boku.otf") format("opentype");
+}
+
+body {
+  font-family: "Boku";
+}

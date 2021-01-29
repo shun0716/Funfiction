@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6.671" height="16.828" viewBox="0 0 12.671 22.828">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #808080;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="back_button" transform="translate(0 0.371)">
+    <path id="パス_85_2_" class="cls-1" d="M11.257,1,1,11,11.257,21" transform="translate(0 0.043)"/>
+  </g>
+</svg>

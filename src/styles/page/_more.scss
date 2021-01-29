@@ -1,0 +1,41 @@
+.more {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.more_image_area {
+  width: 130px;
+  height: 120px;
+  overflow: hidden;
+  img {
+    width: 150px;
+  }
+}
+
+.more_wrap {
+  margin-left: 10px;
+  p {
+    margin-top: 5px;
+  }
+}
+
+.more_title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 200px;
+  color: #404040;
+}
+
+.more_creator {
+  color: #808080;
+  font-size: 12px;
+  padding-top: 7px;
+}
+
+.more_tag {
+  color: orange;
+  font-size: 10px;
+  padding-top: 10px;
+}
